@@ -1,0 +1,226 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #f5f1eb;
+
+  background-image:
+  url("https://www.transparenttextures.com/patterns/rice-paper.png");
+
+  font-family:
+  "Hiragino Mincho ProN",
+  "Yu Mincho",
+  serif;
+}
+
+/* =========================
+   Map
+========================= */
+
+#map {
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* =========================
+   Title
+========================= */
+
+.title-box {
+
+  position: fixed;
+
+  top: 20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 9999;
+
+  background:
+  rgba(255,248,240,0.92);
+
+  padding: 14px 28px;
+
+  border-radius: 20px;
+
+  font-size: 26px;
+
+  letter-spacing: 3px;
+
+  color: #5c2e2e;
+
+  box-shadow:
+  0 8px 24px rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(10px);
+
+  border:
+  2px solid #c9a66b;
+}
+
+/* =========================
+   Emoji Icons
+========================= */
+
+.emoji-icon {
+
+  font-size: 30px;
+
+  text-align: center;
+
+  line-height: 30px;
+
+  transition: 0.25s ease;
+
+  filter:
+  drop-shadow(0 0 6px rgba(255,120,120,0.5));
+}
+
+.emoji-icon:hover {
+
+  transform:
+  scale(1.3)
+  rotate(-8deg);
+}
+
+/* =========================
+   Popup Card
+========================= */
+
+.popup-card {
+
+  width: 230px;
+}
+
+.popup-card img {
+
+  width: 100%;
+
+  aspect-ratio: 16/9;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  margin-bottom: 12px;
+}
+
+.popup-card h2 {
+
+  margin: 0 0 8px;
+
+  color: #732c2c;
+
+  font-size: 20px;
+}
+
+.popup-card p {
+
+  line-height: 1.6;
+
+  color: #333;
+
+  font-size: 14px;
+}
+
+.popup-card a {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 8px 14px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  background: #b44545;
+
+  color: white;
+
+  transition: 0.2s;
+}
+
+.popup-card a:hover {
+
+  transform: scale(1.06);
+
+  background: #943737;
+}
+
+/* =========================
+   Leaflet Popup
+========================= */
+
+.leaflet-popup-content-wrapper {
+
+  border-radius: 22px;
+
+  background:
+  rgba(255,248,240,0.96);
+
+  border:
+  2px solid #c9a66b;
+
+  box-shadow:
+  0 10px 28px rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-popup-content {
+
+  margin: 12px;
+}
+
+/* =========================
+   Maple Leaves Animation
+========================= */
+
+.leaf {
+
+  position: fixed;
+
+  font-size: 24px;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+
+  0% {
+
+    transform:
+    translateY(-20px)
+    rotate(0deg);
+
+    opacity: 1;
+  }
+
+  100% {
+
+    transform:
+    translateY(100vh)
+    rotate(360deg);
+
+    opacity: 0;
+  }
+}
+
+
+
