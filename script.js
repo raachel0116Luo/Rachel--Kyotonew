@@ -8,9 +8,12 @@ var map = L.map('map').setView([35.0116, 135.7681], 12);
 // Tile Layer
 // ============================
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; OpenStreetMap contributors'
+  }
+).addTo(map);
 
 // ============================
 // Emoji Icon Function
@@ -41,7 +44,7 @@ var sites = [
 {
   name: "Kiyomizu-dera",
   coords: [34.9948, 135.7850],
-  emoji: "⛩️",
+  emoji: "🏯",
   description: "Famous wooden temple with panoramic Kyoto views.",
   link: "https://www.kiyomizudera.or.jp/en/"
 },
@@ -57,7 +60,7 @@ var sites = [
 {
   name: "Ginkaku-ji",
   coords: [35.0272, 135.7982],
-  emoji: "🌸",
+  emoji: "🏯",
   description: "Elegant Zen temple known as the Silver Pavilion.",
   link: "https://www.shokoku-ji.jp/ginkakuji/"
 },
@@ -73,7 +76,7 @@ var sites = [
 {
   name: "Nijo Castle",
   coords: [35.0142, 135.7482],
-  emoji: "🏯",
+  emoji: "🏰",
   description: "Historic castle of the Tokugawa shogunate.",
   link: "https://nijo-jocastle.city.kyoto.lg.jp/"
 },
@@ -89,7 +92,7 @@ var sites = [
 {
   name: "To-ji",
   coords: [34.9808, 135.7470],
-  emoji: "🗼",
+  emoji: "🌸",
   description: "Temple with Kyoto’s iconic five-story pagoda.",
   link: "https://toji.or.jp/"
 },
@@ -97,7 +100,7 @@ var sites = [
 {
   name: "Byodo-in",
   coords: [34.8890, 135.8074],
-  emoji: "🪽",
+  emoji: "🪷",
   description: "Phoenix Hall featured on the 10 yen coin.",
   link: "https://www.byodoin.or.jp/"
 },
@@ -105,7 +108,7 @@ var sites = [
 {
   name: "Ujigami Shrine",
   coords: [34.8904, 135.8091],
-  emoji: "🦊",
+  emoji: "⛩️",
   description: "One of Japan’s oldest surviving shrines.",
   link: "https://www.ujigamijinja.com/"
 },
@@ -113,7 +116,7 @@ var sites = [
 {
   name: "Daigo-ji",
   coords: [34.9517, 135.8195],
-  emoji: "🌺",
+  emoji: "🌸",
   description: "Temple famous for cherry blossoms.",
   link: "https://www.daigoji.or.jp/"
 },
@@ -121,15 +124,15 @@ var sites = [
 {
   name: "Ninna-ji",
   coords: [35.0311, 135.7138],
-  emoji: "🌿",
-  description: "Historic temple with Omuro cherry blossoms.",
+  emoji: "🌸",
+  description: "Historic temple famous for Omuro cherry blossoms.",
   link: "https://ninnaji.jp/"
 },
 
 {
   name: "Kozan-ji",
   coords: [35.0615, 135.6717],
-  emoji: "🍂",
+  emoji: "🍁",
   description: "Mountain temple famous for autumn leaves.",
   link: "https://kosanji.com/"
 },
@@ -137,7 +140,7 @@ var sites = [
 {
   name: "Saiho-ji",
   coords: [34.9918, 135.6668],
-  emoji: "🌱",
+  emoji: "🌿",
   description: "The famous moss temple.",
   link: "https://saihoji-kokedera.com/"
 },
@@ -145,7 +148,7 @@ var sites = [
 {
   name: "Shimogamo Shrine",
   coords: [35.0390, 135.7721],
-  emoji: "🍁",
+  emoji: "⛩️",
   description: "Ancient shrine surrounded by forest.",
   link: "https://www.shimogamo-jinja.or.jp/"
 },
@@ -169,7 +172,7 @@ var sites = [
 {
   name: "Nishi Hongan-ji",
   coords: [34.9913, 135.7517],
-  emoji: "🏮",
+  emoji: "🔔",
   description: "Important Buddhist temple in central Kyoto.",
   link: "https://www.hongwanji.kyoto/"
 }
@@ -233,12 +236,13 @@ function createLeaf() {
     leaf.remove();
 
   }, 8000);
+
 }
 
 setInterval(createLeaf, 900);
 
 // ============================
-// Popup Effect
+// Popup Confetti Effect
 // ============================
 
 map.on("popupopen", () => {
